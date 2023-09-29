@@ -1,4 +1,4 @@
-SF Food Trucks
+F Food Trucks
 ===
 
 > San Francisco's finger-licking street food now at your fingertips.
