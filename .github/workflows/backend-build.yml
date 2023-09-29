@@ -34,10 +34,10 @@ jobs:
       run: |
         cd backend && \
         docker build . --file Dockerfile \
-        --tag ghcr.io/${{ env.BASE_IMG_NAME }}/ft-backend:${{ steps.vars.outputs.sha_short }} \
-        --tag ghcr.io/${{ env.BASE_IMG_NAME }}/ft-backend:latest
+        --tag ghcr.io/${{ env.OWNER_LC }}/ft-backend:${{ steps.vars.outputs.sha_short }} \
+        --tag ghcr.io/${{ env.OWNER_LC }}/ft-backend:latest
     - name: Publish the images
       run: | 
-        docker push ghcr.io/${{ env.BASE_IMG_NAME }}/ft-backend:${{ steps.vars.outputs.sha_short }}
-        docker push ghcr.io/${{ env.BASE_IMG_NAME }}/ft-backend:latest
+        docker push ghcr.io/${{ env.OWNER_LC }}/ft-backend:${{ steps.vars.outputs.sha_short }}
+        docker push ghcr.io/${{ env.OWNER_LC }}/ft-backend:latest
 
